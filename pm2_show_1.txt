@@ -1,0 +1,53 @@
+ Describing process with id 1 - name npm 
+┌───────────────────┬────────────────────────────────────────┐
+│ status            │ online                                 │
+│ name              │ npm                                    │
+│ version           │ N/A                                    │
+│ restarts          │ 0                                      │
+│ uptime            │ 67m                                    │
+│ script path       │ /usr/bin/npm                           │
+│ script args       │ start                                  │
+│ error log path    │ /home/ubuntu/.pm2/logs/npm-error.log   │
+│ out log path      │ /home/ubuntu/.pm2/logs/npm-out.log     │
+│ pid path          │ /home/ubuntu/.pm2/pids/npm-1.pid       │
+│ interpreter       │ node                                   │
+│ interpreter args  │ N/A                                    │
+│ script id         │ 1                                      │
+│ exec cwd          │ /home/ubuntu/gitRepo/styleTransferDemo │
+│ exec mode         │ fork_mode                              │
+│ node.js version   │ 10.16.3                                │
+│ node env          │ N/A                                    │
+│ watch & reload    │ ✘                                      │
+│ unstable restarts │ 0                                      │
+│ created at        │ 2019-09-28T02:55:59.772Z               │
+└───────────────────┴────────────────────────────────────────┘
+ Actions available 
+┌────────────────────────┐
+│ km:heapdump            │
+│ km:cpu:profiling:start │
+│ km:cpu:profiling:stop  │
+│ km:heap:sampling:start │
+│ km:heap:sampling:stop  │
+└────────────────────────┘
+ Trigger via: pm2 trigger npm <action_name>
+
+ Code metrics value 
+┌────────────────────────┬───────────┐
+│ Heap Size              │ 15.23 MiB │
+│ Heap Usage             │ 72.17 %   │
+│ Used Heap Size         │ 10.99 MiB │
+│ Active requests        │ 0         │
+│ Active handles         │ 4         │
+│ Event Loop Latency     │ 0.91 ms   │
+│ Event Loop Latency p95 │ 2.27 ms   │
+└────────────────────────┴───────────┘
+ Divergent env variables from local env 
+┌────────┬────────────────────────────────────────┐
+│ OLDPWD │ N/A                                    │
+│ PWD    │ /home/ubuntu/gitRepo/styleTransferDemo │
+└────────┴────────────────────────────────────────┘
+
+ Add your own code metrics: http://bit.ly/code-metrics
+ Use `pm2 logs npm [--lines 1000]` to display logs
+ Use `pm2 env 1` to display environement variables
+ Use `pm2 monit` to monitor CPU and Memory usage npm

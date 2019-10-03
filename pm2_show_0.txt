@@ -1,0 +1,56 @@
+ Describing process with id 0 - name server 
+┌───────────────────┬───────────────────────────────────────────┐
+│ status            │ online                                    │
+│ name              │ server                                    │
+│ version           │ 2.0.0                                     │
+│ restarts          │ 0                                         │
+│ uptime            │ 67m                                       │
+│ script path       │ /home/ubuntu/gitRepo/PWAWeather/server.js │
+│ script args       │ N/A                                       │
+│ error log path    │ /home/ubuntu/.pm2/logs/server-error.log   │
+│ out log path      │ /home/ubuntu/.pm2/logs/server-out.log     │
+│ pid path          │ /home/ubuntu/.pm2/pids/server-0.pid       │
+│ interpreter       │ node                                      │
+│ interpreter args  │ N/A                                       │
+│ script id         │ 0                                         │
+│ exec cwd          │ /home/ubuntu/gitRepo/PWAWeather           │
+│ exec mode         │ fork_mode                                 │
+│ node.js version   │ 10.16.3                                   │
+│ node env          │ N/A                                       │
+│ watch & reload    │ ✘                                         │
+│ unstable restarts │ 0                                         │
+│ created at        │ 2019-09-28T02:56:12.770Z                  │
+└───────────────────┴───────────────────────────────────────────┘
+ Actions available 
+┌────────────────────────┐
+│ km:heapdump            │
+│ km:cpu:profiling:start │
+│ km:cpu:profiling:stop  │
+│ km:heap:sampling:start │
+│ km:heap:sampling:stop  │
+└────────────────────────┘
+ Trigger via: pm2 trigger server <action_name>
+
+ Code metrics value 
+┌────────────────────────┬───────────┐
+│ Heap Size              │ 14.73 MiB │
+│ Heap Usage             │ 77.15 %   │
+│ Used Heap Size         │ 11.37 MiB │
+│ Active requests        │ 0         │
+│ Active handles         │ 4         │
+│ Event Loop Latency     │ 0.87 ms   │
+│ Event Loop Latency p95 │ 2.24 ms   │
+│ HTTP                   │ 0 req/min │
+│ HTTP Mean Latency      │ 1 ms      │
+│ HTTP P95 Latency       │ 4.75 ms   │
+└────────────────────────┴───────────┘
+ Divergent env variables from local env 
+┌────────┬─────────────────────────────────┐
+│ OLDPWD │ /home/ubuntu/gitRepo            │
+│ PWD    │ /home/ubuntu/gitRepo/PWAWeather │
+└────────┴─────────────────────────────────┘
+
+ Add your own code metrics: http://bit.ly/code-metrics
+ Use `pm2 logs server [--lines 1000]` to display logs
+ Use `pm2 env 0` to display environement variables
+ Use `pm2 monit` to monitor CPU and Memory usage server
