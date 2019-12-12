@@ -9,13 +9,9 @@ add_header X-XSS-Protection "1; mode=block";
 server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
-
         root /var/www/html;
-
 	index index.html;
-
 	server_name _;
-
  	location / {
  		proxy_pass http://localhost:5000;
                 proxy_http_version 1.1;
@@ -24,183 +20,111 @@ server {
                 proxy_set_header Host $host;
                 proxy_cache_bypass $http_upgrade;
         }
-
-
 }
 
 
 server {
-
         root /home/ubuntu/gitRepo/peerbankingcomau;
-
         index index.html;
 	error_page 404             /404.html;
 	error_page 500 502 503 504 /50x.html;
-
 	location / {
 		try_files $uri $uri/ =404;
 	}
-
 	listen 443 ssl; # managed by Certbot
         server_name peerbanking.com.au www.peerbanking.com.au;
 	add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload";
-    ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
+	ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
+	ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
 	include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
 	ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
-
-
-
-
-
 }
 
 
 server {
-
         root /home/ubuntu/gitRepo/team835Govhack2019SinglePage;
-
         index index.html;
-
         server_name govhack2019.peerbanking.com.au www.govhack2019.peerbanking.com.au;
-
         location / {
 		try_files $uri $uri/ =404;        
 	}
-
 	listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
+	ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
+	ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
 	include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
 	ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
-
-
-
-
-
 }
 
 
 server {
-
         root /home/ubuntu/gitRepo/TrashTrashRevolution;
-
         index index.html;
-
         server_name trashtrashrevolution.com www.trashtrashrevolution.com;
-
         location / {
                 try_files $uri $uri/ =404;
         }
-
         listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
+	ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
+	ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
         include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
         ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
-
-
-
-
-
 }
 
 
 server {
-
         root /home/ubuntu/gitRepo/TrashTrashRevolution;
-
         index index.html;
-
         server_name trash.peerbanking.com.au www.trash.peerbanking.com.au;
-
         location / {
                 try_files $uri $uri/ =404;
         }
-
         listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
+	ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
+	ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
         include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
         ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
-
-
-
-
-
 }
 
 
 
 
 server {
-
         root /home/ubuntu/gitRepo/360ToursDemo;
-
         index index.html;
-
         server_name vrhackathon2019.peerbanking.com.au www.vrhackathon2019.peerbanking.com.au;
-
         location / {
                 try_files $uri $uri/ =404;
         }
-
         listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
+	ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
+	ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
         include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
         ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
-
-
-
-
-
 }
 
 
 
 server {
-
         root /home/ubuntu/gitRepo/demospeerbankingcomau;
-
         index index.html;
 	error_page 404                /404.html;
 	error_page 500 502 503 504 =200   /50x.html;
-
         server_name demos.peerbanking.com.au www.demos.peerbanking.com.au;
-
         location / {
                 try_files $uri.html $uri $uri/ =404;
         }
-
-
         listen 443 ssl http2; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
+	ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
+	ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
         include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
         ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
-
-
-
-
-
 }
 
 
 server {
-
         root /var/www/html;
-
         index index.html;
-
         server_name automationservices.host www.automationservices.host app.automationservices.host;
-
         location / {
                 proxy_pass http://localhost:5000;
                 proxy_http_version 1.1;
@@ -209,38 +133,18 @@ server {
                 proxy_set_header Host $host;
                 proxy_cache_bypass $http_upgrade;
         }
-
 	listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
+    	ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
+    	ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
 	include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
 	ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
 server {
-
         root /var/www/html;
-
         index index.html;
-
         server_name style.automationservices.host style.peerbanking.com.au www.style.peerbanking.com.au;
-
         location / {
                 proxy_pass http://localhost:6000;
                 proxy_http_version 1.1;
@@ -249,35 +153,17 @@ server {
                 proxy_set_header Host $host;
                 proxy_cache_bypass $http_upgrade;
         }
-
         listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
+	ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
+    	ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
         include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
         ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 server {
-
         root /var/www/html;
-
         index index.html;
-
         server_name library.peerbanking.com.au www.library.peerbanking.com.au;
-
         location / {
                 proxy_pass http://localhost:3500;
                 proxy_http_version 1.1;
@@ -286,18 +172,11 @@ server {
                 proxy_set_header Host $host;
                 proxy_cache_bypass $http_upgrade;
         }
-
         listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
+    	ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
+    	ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
         include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
         ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
-
-
-
-
-
 }
 
 
@@ -443,12 +322,6 @@ server {
 
 
 
-
-
-
-
-
-
 server {
 	listen 80 ;
 	listen [::]:80 ;
@@ -456,8 +329,7 @@ server {
         root /var/www/html;
 
 	index index.html;
-    server_name node2.trashtrashrevolution.com node1.trashtrashrevolution.com; # managed by Certbot
-
+	server_name node2.trashtrashrevolution.com node1.trashtrashrevolution.com; # managed by Certbot
 
  	location / {
  		proxy_pass http://localhost:5000;
@@ -468,16 +340,10 @@ server {
                 proxy_cache_bypass $http_upgrade;
         }
 
-
-
-
-    listen [::]:443 ssl ipv6only=on; # managed by Certbot
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
-
-
+    	listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    	listen 443 ssl; # managed by Certbot
+    	ssl_certificate /etc/letsencrypt/live/peerbanking.com.au-0001/fullchain.pem; # managed by Certbot
+    	ssl_certificate_key /etc/letsencrypt/live/peerbanking.com.au-0001/privkey.pem; # managed by Certbot
+    	include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    	ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 }
